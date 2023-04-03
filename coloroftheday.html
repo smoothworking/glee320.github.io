@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color of the Day Fashion Recommendation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      .color-box {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+      }
+      .fashion-item {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1>Color of the Day Fashion Recommendation</h1>
+      <div class="color-box" id="color-box"></div>
+      <div class="fashion-item" id="fashion-item">Check out our recommended fashion item for today's color!</div>
+      <button class="btn btn-primary mt-3" id="button">Get Today's Color</button>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Array of colors and matching fashion items
+        var colors = [
+          {color: "red", item: "red dress"},
+          {color: "blue", item: "blue jeans"},
+          {color: "green", item: "green sweater"},
+          {color: "yellow", item: "yellow scarf"},
+          {color: "purple", item: "purple skirt"},
+          {color: "orange", item: "orange shirt"}
+        ];
+
+        // Function to select a random color and matching fashion item
+        function selectColor() {
+          var index = Math.floor(Math.random() * colors.length);
+          var selectedColor = colors[index];
+          $('#color-box').css('background-color', selectedColor.color);
+          $('#fashion-item').html('Check out our recommended fashion item for ' + selectedColor.color + ': ' + selectedColor.item + '!');
+        }
+
+        // Click event listener for the button
+        $('#button').click(function() {
+          selectColor();
+        });
+      });
+    </script>
+  </body>
+</html>
