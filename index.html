@@ -1,68 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Emoji Fortune Teller</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-      .emoji {
-        font-size: 100px;
-        margin-top: 50px;
-      }
-      .fortune {
-        font-size: 24px;
-        font-weight: bold;
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container text-center">
-      <h1>Emoji Fortune Teller</h1>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="emoji" id="emoji">&#x1F610;</div>
-          <div class="fortune" id="fortune">Click the button to reveal your fortune!</div>
-          <button class="btn btn-primary mt-3" id="button">Reveal My Fortune</button>
-        </div>
-      </div>
-    </div>
+<head>
+  <title>Lullaby Lab</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fortuneteller.html">Emoji Fortune Teller</a></li>
+        <li><a href="coloroftheday.html">Color of the Day</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        // Array of emojis and corresponding fortunes
-        var fortunes = [
-          {emoji: "&#x1F602;", fortune: "You will have a great day today!"},
-          {emoji: "&#x1F60D;", fortune: "You will meet someone special soon."},
-          {emoji: "&#x1F631;", fortune: "You will face a challenge today, but you will overcome it."},
-          {emoji: "&#x1F914;", fortune: "You will learn something new today."},
-          {emoji: "&#x1F60A;", fortune: "You will receive good news soon."},
-          {emoji: "&#x1F636;", fortune: "You should be careful today and avoid taking unnecessary risks."},
-          {emoji: "&#x1F4A9;", fortune: "You will have financial success soon."},
-          {emoji: "&#x1F44C;", fortune: "You will be praised for your hard work and achievements today."},
-          {emoji: "&#x1F618;", fortune: "You will fall in love soon."},
-          {emoji: "&#x1F610;", fortune: "You will have a peaceful day today."}
-        ];
-
-        // Function to randomly select an emoji and fortune
-        function selectFortune() {
-          var index = Math.floor(Math.random() * fortunes.length);
-          var selectedFortune = fortunes[index];
-          $('#emoji').html(selectedFortune.emoji);
-          $('#fortune').html(selectedFortune.fortune);
-        }
-
-        // Click event listener for the button
-        $('#button').click(function() {
-          selectFortune();
-        });
-      });
-    </script>
-  </body>
+  <main>
+    <h1>Welcome to My Website</h1>
+    <p>Here you can find information about my projects, hobbies, and interests.</p>
+  </main>
+</body>
 </html>
